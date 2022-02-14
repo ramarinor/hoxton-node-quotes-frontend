@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./componets/Header";
 import Quotes from "./pages/Quotes";
 import RandomQuote from "./pages/RandomQuote";
+import SingleQuote from "./pages/SingleQuote";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/quotes" />} />
         <Route path="/quotes" element={<Quotes />} />
-        <Route path="random" element={<RandomQuote />} />
+        <Route path="/quotes/:id" element={<SingleQuote />} />
+        <Route path="/random" element={<RandomQuote />} />
       </Routes>
     </main>
   );

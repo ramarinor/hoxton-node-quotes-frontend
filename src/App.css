@@ -1,3 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+a {
+  text-decoration: unset;
+  color: unset;
+}
+
 .App {
   display: grid;
   place-items: center;
@@ -6,6 +20,7 @@
 .header {
   display: grid;
   justify-items: center;
+  margin-bottom: 1.5rem;
 }
 
 .nav-bar__list {
@@ -24,4 +39,21 @@
   list-style-type: none;
   display: grid;
   gap: 1rem;
+}
+
+.quote {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+}
+
+.quote__content {
+  display: grid;
+}
+
+.quote__content q {
+  font-size: 2rem;
+}
+
+.quote__content p {
+  justify-self: end;
 }

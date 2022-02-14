@@ -2,5 +2,8 @@
 type Quote = {
   id: number;
   content: string;
-  author: string;
+  firstName: string;
+  lastName: string;
+  age: number;
+  image: string;
 };

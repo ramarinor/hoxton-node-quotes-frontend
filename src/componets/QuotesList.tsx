@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Quote from "./Quote";
 
 type Props = {
@@ -8,7 +9,9 @@ function QuotesList({ quotes }: Props) {
     <ul className="quotes__list">
       {quotes.map((quote) => (
         <li className="quotes__list-item" key={quote.id}>
-          <Quote quote={quote} />
+          <Link to={`/quotes/${quote.id}`}>
+            <Quote quote={quote} />
+          </Link>
         </li>
       ))}
     </ul>

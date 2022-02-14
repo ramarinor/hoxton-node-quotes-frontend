@@ -15,6 +15,11 @@ function Header() {
               Random Quote
             </NavLink>
           </li>
+          <li className="nav-bar__item">
+            <NavLink to="/addQuote" className="nav-bar__link">
+              Add a quote
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>

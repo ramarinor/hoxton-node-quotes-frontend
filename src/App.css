@@ -57,3 +57,6 @@ a {
 .quote__content p {
   justify-self: end;
 }
+.add-quote-form {
+  display: grid;
+}

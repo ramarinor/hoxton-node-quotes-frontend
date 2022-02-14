@@ -15,7 +15,7 @@ function SingleQuote() {
       });
   }, []);
   if (error) return <p>{error}</p>;
-  else if (quote === null) return <p>Loading</p>;
+  if (quote === null) return <p>Loading</p>;
 
   return <Quote quote={quote} />;
 }

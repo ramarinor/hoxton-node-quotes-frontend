@@ -10,6 +10,14 @@ function EditQuote() {
       .then((resp) => resp.json())
       .then((quote) => setQuote(quote));
   }, []);
+  function deleteQuote() {
+    fetch(`http://localhost:4000/quotes/${params.id}`, {
+      method: "DELETE"
+    });
+    navigate("/quotes");
+    // .then((parsedResp) => console.log(parsedResp));
+  }
+
   return (
     <form
       className="edit-quote-form"
@@ -76,7 +84,7 @@ function EditQuote() {
         />
       </label>
       <label>
-        Age:{" "}
+        Age:
         <input
           type="number"
           name="age"
@@ -86,10 +94,13 @@ function EditQuote() {
         />
       </label>
       <label>
-        Image:{" "}
+        Image:
         <input type="url" name="image" required defaultValue={quote?.image} />
       </label>
       <button type="submit"> Save</button>
+      <button onClick={deleteQuote} type="button">
+        Delete Quote
+      </button>
     </form>
   );
 }
